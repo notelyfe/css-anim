@@ -41,7 +41,7 @@ const Home = () => {
       <div className="container rounded" style={{ border: '2px solid grey', height: '50vh' }}>
         <div className="row">
 
-          <div className="col-4 case rounded px-0" id='anim1' onMouseEnter={pic1_anim} onMouseLeave={arrowAnim}>
+          <div className="col-12 col-md-4 case rounded px-0" id='anim1' onMouseEnter={pic1_anim} onMouseLeave={arrowAnim}>
             <div className="title">
               <h5>STRENGTH</h5>
               <GrFormNext className={`arrow d-${arrow1===true?'block':'none'}`}/>
@@ -49,7 +49,7 @@ const Home = () => {
             <img className='pics rounded' src={pic1} alt="" />
           </div>
 
-          <div className="col-4 case rounded px-0" id='anim2' onMouseEnter={pic2_anim} onMouseLeave={arrowAnim}>
+          <div className="col-12 col-md-4 case rounded px-0" id='anim2' onMouseEnter={pic2_anim} onMouseLeave={arrowAnim}>
             <div className="title">
               <h5>MOBILITY</h5>
               <GrFormNext className={`arrow d-${arrow2===true?'block':'none'}`}/>
@@ -57,7 +57,7 @@ const Home = () => {
             <img className='pics rounded' src={pic2} alt="" />
           </div>
 
-          <div className="col-4 case rounded px-0" id='anim3' onMouseEnter={pic3_anim} onMouseLeave={arrowAnim}>
+          <div className="col-12 col-md-4 case rounded px-0" id='anim3' onMouseEnter={pic3_anim} onMouseLeave={arrowAnim}>
             <div className="title">
               <h5>DRILLS</h5>
               <GrFormNext className={`arrow d-${arrow3===true?'block':'none'}`}/>

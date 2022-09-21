@@ -81,7 +81,7 @@ const Navbar = () => {
                     </ul>
                     <div className="admin-login d-flex align-items-center">
                         <AiOutlineUser style={{ fontSize: '20px' }} />
-                        <a className='nav-link text-dark px-1' href="/login">Login</a>
+                        <a className='nav-link text-dark px-1' href="#">Login</a>
                     </div>
                 </div>
             </div>
