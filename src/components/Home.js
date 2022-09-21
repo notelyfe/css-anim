@@ -7,13 +7,33 @@ import { GrFormNext } from "react-icons/gr";
 
 const Home = () => {
 
-  const anim = () =>{
-    setMouseIn(true)
+  const pic1_anim = () =>{
+    setArrow1(true)
+    document.getElementById('anim1').style.width = '50%';
+    document.getElementById('anim2').style.width = '25%';
+    document.getElementById('anim3').style.width = '25%';
   }
-  const noAnim = () =>{
-    setMouseIn(false)
+  const pic2_anim = () =>{
+    setArrow2(true)
+    document.getElementById('anim1').style.width = '25%';
+    document.getElementById('anim2').style.width = '50%';
+    document.getElementById('anim3').style.width = '25%';
   }
-  const [mouseIn, setMouseIn] = useState(false)
+  const pic3_anim = () =>{
+    setArrow3(true)
+    document.getElementById('anim1').style.width = '25%';
+    document.getElementById('anim2').style.width = '25%';
+    document.getElementById('anim3').style.width = '50%';
+  }
+
+  const arrowAnim = () => {
+    setArrow1(false)
+    setArrow2(false)
+    setArrow3(false)
+  }
+  const [arrow1, setArrow1] = useState(false)
+  const [arrow2, setArrow2] = useState(false)
+  const [arrow3, setArrow3] = useState(false)
 
   return (
     <div className='container' style={{ marginTop: '13vh' }}>
@@ -21,26 +41,26 @@ const Home = () => {
       <div className="container rounded" style={{ border: '2px solid grey', height: '50vh' }}>
         <div className="row">
 
-          <div className={`col-${mouseIn===true?'6':'4'} case rounded px-0`} onMouseEnter={anim} onMouseLeave={noAnim}>
+          <div className="col-4 case rounded px-0" id='anim1' onMouseEnter={pic1_anim} onMouseLeave={arrowAnim}>
             <div className="title">
               <h5>STRENGTH</h5>
-              <GrFormNext className={`arrow d-${mouseIn===true?'block':'none'}`} />
+              <GrFormNext className={`arrow d-${arrow1===true?'block':'none'}`}/>
             </div>
             <img className='pics rounded' src={pic1} alt="" />
           </div>
 
-          <div className={`col-${mouseIn===true?'6':'4'} case rounded px-0`} onMouseEnter={anim} onMouseLeave={noAnim}>
+          <div className="col-4 case rounded px-0" id='anim2' onMouseEnter={pic2_anim} onMouseLeave={arrowAnim}>
             <div className="title">
               <h5>MOBILITY</h5>
-              <GrFormNext className={`arrow d-${mouseIn===true?'block':'none'}`} />
+              <GrFormNext className={`arrow d-${arrow2===true?'block':'none'}`}/>
             </div>
             <img className='pics rounded' src={pic2} alt="" />
           </div>
 
-          <div className={`col-${mouseIn===true?'6':'4'} case rounded px-0`} onMouseEnter={anim} onMouseLeave={noAnim}>
+          <div className="col-4 case rounded px-0" id='anim3' onMouseEnter={pic3_anim} onMouseLeave={arrowAnim}>
             <div className="title">
               <h5>DRILLS</h5>
-              <GrFormNext className={`arrow d-${mouseIn===true?'block':'none'}`} />
+              <GrFormNext className={`arrow d-${arrow3===true?'block':'none'}`}/>
             </div>
             <img className='pics rounded' src={pic3} alt="" />
           </div>
