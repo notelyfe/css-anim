@@ -1,0 +1,40 @@
+.admin-login{
+    display: flex;
+    align-items: center;
+}
+
+#hamburger{
+    font-size: 40px;
+    border: 2px solid grey;
+    color: grey;
+    display: none;
+}
+
+#ham_nav{
+    height: 0;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    top: 60px;
+    opacity: 0.8;
+    overflow-x: hidden;
+    transition: 0.5s;
+    line-height: 1em;
+}
+
+@media(max-width: 650px){
+    #hamburger{
+        display: block;
+    }
+    .nav-items{
+        display: none;
+    }
+    .admin-login{
+        display: none;
+    }
+    .ham_item{
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+    }
+}
