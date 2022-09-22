@@ -13,6 +13,12 @@
     color: grey;
     display: none;
 }
+#ham-close{
+    font-size: 40px;
+    border: 2px solid grey;
+    color: grey;
+    display: none;
+}
 
 #ham_nav{
     height: 0;
@@ -28,6 +34,9 @@
 
 @media(max-width: 650px){
     #hamburger{
+        display: block;
+    }
+    #ham-close{
         display: block;
     }
     .nav-items{

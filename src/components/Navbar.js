@@ -7,6 +7,7 @@ import {
 } from "react-icons/ai";
 import { FaRunning } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { CgClose } from "react-icons/cg";
 import './Navbar.css';
 
 const Navbar = () => {
@@ -53,12 +54,18 @@ const Navbar = () => {
                     <AiOutlineUser style={{ fontSize: '20px' }} />
                     <a className='nav-link text-dark px-1' href="/login">Login</a>
                 </div>
+                {(toggle === false) ?
+                    <CgClose
+                        id='ham-close'
+                        className='py-1 px-1 rounded'
+                        onClick={toggleBtn}
+                    /> :
+                    <GiHamburgerMenu
+                        id='hamburger'
+                        className='py-1 px-1 rounded'
+                        type='button'
+                        onClick={toggleBtn} />}
 
-                <GiHamburgerMenu
-                    id='hamburger'
-                    className='py-1 px-1 rounded'
-                    type='button'
-                    onClick={toggleBtn} />
 
                 <div className="ham_item bg-light" id='ham_nav'>
                     <ul className=' navbar-nav d-flex flex-column'>
